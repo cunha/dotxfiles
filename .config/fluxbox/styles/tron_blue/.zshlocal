@@ -1,0 +1,10 @@
+ls
+cd the
+vi theme.cfg
+aptitude search gohu
+vi theme.cfg
+dir
+cd
+ls
+vim theme.cfg
+cd
