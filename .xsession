@@ -29,4 +29,4 @@ uxterm -e /usr/bin/zsh -c ssh-add .ssh/muxops_id_rsa .ssh/id_rsa &
 
 # startkde
 # i3 -V >> ~/.i3.log 2>&1
-fluxbox -rc .config/fluxbox/init -log "/home/cunha/.cache/fluxbox.log"
+fluxbox -rc "/home/cunha/.config/fluxbox/init" -log "/home/cunha/.cache/fluxbox.log"
