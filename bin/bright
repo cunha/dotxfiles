@@ -1,0 +1,30 @@
+#!/bin/bash
+# this script makes us of fancy redirection
+
+if [ $# != 1 ] ; then
+	echo "usage: $0 brightness"
+	exit 1
+fi
+
+curr=$(cat /sys/class/backlight/intel_backlight/brightness)
+case $1 in
+up)
+    bright=$(( $curr + 250 ))
+    ;;
+down)
+    bright=$(( $curr - 250 ))
+    ;;
+*)
+    bright=$1
+    ;;
+esac
+
+max=$(cat /sys/class/backlight/intel_backlight/max_brightness)
+if [ $bright -ge $max ] ; then
+    bright=$max
+elif [ $bright -lt 0 ] ; then
+    bright=100
+fi
+
+sudo tee /sys/class/backlight/intel_backlight/brightness <<< $bright
+# echo $bright > /sys/class/backlight/intel_backlight/brightness 

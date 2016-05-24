@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eux
+
+xrandr --output DP1 --pos 1920x0 --rotate left
+xrandr --output VGA1 --pos 0x450 --auto
