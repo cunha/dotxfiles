@@ -16,8 +16,9 @@ export MOZ_USE_OMTC=1
 
 xsetroot -mod 2 2 -fg black -bg midnightblue
 # clipit &
-# dropbox start &
-nm-applet &
+dropbox start &
+insync start &
+# nm-applet &
 
 # tmux new-session -d -s main
 # tmux new-window -t main:1
