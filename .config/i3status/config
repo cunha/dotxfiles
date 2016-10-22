@@ -7,7 +7,7 @@ general {
 order += "load"
 order += "cpu_temperature 0"
 order += "battery 0"
-order += "local"
+order += "tztime local"
 
 load {
 	format = "LOAD %5min"

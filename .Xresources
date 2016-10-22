@@ -19,7 +19,7 @@ XTerm*faceSize:		13
 UXTerm*faceName:	Source Code Pro
 ! UXTerm*faceName:	Neep
 ! UXTerm*faceName:	Ubuntu Mono derivative Powerline
-UXTerm*faceSize:	14
+UXTerm*faceSize:	12
 ! UXTerm*scaleHeight:	1.25
 UXTerm*scrollBar:	false
 UXTerm*visualBell:	true
