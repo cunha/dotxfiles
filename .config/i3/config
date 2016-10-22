@@ -43,8 +43,8 @@ bindsym XF86AudioMute exec "amixer sset Master,0 toggle"
 bindsym XF86AudioRaiseVolume exec "amixer sset Master,0 5+"
 bindsym XF86AudioLowerVolume exec "amixer sset Master,0 5-"
 
-bindsym XF86MonBrightnessUp exec sudo /home/cunha/bin/bright up
-bindsym XF86MonBrightnessDown exec sudo /home/cunha/bin/bright down
+bindsym XF86MonBrightnessUp exec /home/cunha/bin/bright up
+bindsym XF86MonBrightnessDown exec /home/cunha/bin/bright down
 
 
 # kill focused window
