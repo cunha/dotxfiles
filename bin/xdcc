@@ -1,5 +1,6 @@
 #!/bin/sh
 set -eux
 
-xrandr --output DP1 --pos 1920x0 --rotate left
-xrandr --output VGA1 --pos 0x450 --auto
+xrandr --output DP-1-1 --pos 0x0 --rotate left
+xrandr --output DP-1-3 --pos 1080x300 --auto
+xrandr --output eDP-1 --off
