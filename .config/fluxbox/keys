@@ -67,9 +67,12 @@ XF86AudioPlay :Exec mocp --play
 XF86AudioStop :Exec mocp --stop
 XF86AudioNext :Exec mocp --next
 XF86AudioPrev :Exec mocp --previous
-XF86AudioMute :Exec amixer sset Master,0 toggle
-XF86AudioRaiseVolume :Exec amixer sset Master,0 5+
-XF86AudioLowerVolume :Exec amixer sset Master,0 5-
+# XF86AudioMute :Exec amixer sset Master,0 toggle
+# XF86AudioRaiseVolume :Exec amixer sset Master,0 5+
+# XF86AudioLowerVolume :Exec amixer sset Master,0 5-
+XF86AudioMute :Exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86AudioRaiseVolume :Exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+XF86AudioLowerVolume :Exec pactl set-sink-volume @DEFAULT_SINK@ -10%
 
 XF86MonBrightnessUp :Exec sudo /home/cunha/bin/bright up
 XF86MonBrightnessDown :Exec sudo /home/cunha/bin/bright down
