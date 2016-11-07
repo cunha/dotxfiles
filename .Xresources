@@ -16,7 +16,7 @@ UXTerm*locale: true
 XTerm*faceName:		Neep
 XTerm*faceSize:		13
 
-UXTerm*faceName:	Source Code Pro
+UXTerm*faceName:	Source Code Pro Semibold
 ! UXTerm*faceName:	Neep
 ! UXTerm*faceName:	Ubuntu Mono derivative Powerline
 UXTerm*faceSize:	12

@@ -167,12 +167,15 @@ bar {
 }
 
 # Startup applications
+exec --no-startup-id i3-msg 'exec exec /usr/bin/gnome-settings-daemon'
+exec --no-startup-id i3-msg 'exec gsettings set org.gnome.settings-daemon.plugins.print-notifications active false'
 exec --no-startup-id i3-msg 'exec exec /usr/bin/nm-applet'
 exec --no-startup-id i3-msg 'exec exec /usr/bin/pasystray'
-exec --no-startup-id i3-msg 'exec exec /usr/bin/redshift -c .config/redshift.conf'
-# exec --no-startup-id i3-msg 'dropbox start'
+exec --no-startup-id i3-msg 'exec exec /usr/bin/owncloud --logfile /home/cunha/.cache/owncloud.log'
+# exec --no-startup-id i3-msg 'exec exec /usr/bin/redshift -c .config/redshift.conf'
+# exec --no-startup-id i3-msg 'exec /usr/bin/dropbox start'
 
-for_window [title='ssh-agent'] floating enable
-exec --no-startup-id i3-msg 'exec uxterm -fs 16 -T ssh-agent -e /usr/bin/zsh -c ssh-add .ssh/muxops_id_rsa .ssh/id_rsa'
+# for_window [title='ssh-agent'] floating enable
+exec --no-startup-id i3-msg 'exec exec uxterm -fs 16 -e /usr/bin/zsh -c ssh-add .ssh/muxops_id_rsa .ssh/id_rsa'
 
 

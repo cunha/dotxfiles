@@ -3,7 +3,9 @@ set -u
 
 setxkbmap -query | grep intl > /dev/null
 if [ $? -eq 0 ] ; then
-	setxkbmap -layout us -option ctrl:swapcaps
+    setxkbmap -option
+	setxkbmap -layout us -option ctrl:swapcaps -option ctrl:swap_rwin_rctl
 else
-	setxkbmap -layout us -variant intl -option "ctrl:swapcaps,lv3:ralt_alt"
+    setxkbmap -option
+	setxkbmap -layout us -variant intl -option ctrl:swapcaps -option ctrl:swap_rwin_rctl
 fi
