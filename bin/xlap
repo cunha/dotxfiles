@@ -7,4 +7,5 @@ xrandr --output DP-1-3 --off
 xrandr --output eDP-1 --auto
 xrandr --dpi 192
 gsettings set org.gnome.desktop.interface text-scaling-factor 2
+gsettings set org.gnome.desktop.interface cursor-size 48
 i3-msg restart
