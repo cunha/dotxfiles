@@ -1,4 +1,4 @@
-setxkbmap -layout us -option ctrl:swapcaps
+setxkbmap -layout us -option ctrl:swapcaps -option ctrl:swap_rwin_rctl
 xcape -e "Control_L=Escape"
 
 export GTK_IM_MODULE=xim
