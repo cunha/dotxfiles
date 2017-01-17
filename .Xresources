@@ -1,118 +1,113 @@
-Xft.autohint: 0
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintfull
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
+Xft.autohint:   0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting:    1
+Xft.antialias:  1
+Xft.rgba:       rgb
 
-UXTerm*termName: xterm-256color
-UXTerm*locale: true
-
-*VT100*utf8: 1
-*VT100*eightBitInput: false
+*VT100*utf8:            1
+*VT100*eightBitInput:   false
 *VT100*eightBitControl: false
-*VT100*eightBitOutput: true
+*VT100*eightBitOutput:  true
 
-XTerm*faceName:		Neep
-XTerm*faceSize:		13
-
-UXTerm*faceName:	Source Code Pro Semibold
-! UXTerm*faceName:	Neep
-! UXTerm*faceName:	Ubuntu Mono derivative Powerline
-UXTerm*faceSize:	12
-! UXTerm*scaleHeight:	1.25
-UXTerm*scrollBar:	false
-UXTerm*visualBell:	true
-UXTerm*saveLines:	10000
-UXTerm*fastScroll:	true
-UXTerm*cursorBlink:	on
-UXTerm*cursorOnTime:	250
-UXTerm*cursorOffTime:	250
-UXTerm*colorBDMode:	false
-UXTerm*colorULMode:	false
-UXTerm*italicULMode:	false
+XTerm*faceName:         Neep
+XTerm*faceSize:         13
+UXTerm*termName:        xterm-256color
+UXTerm*locale:          true
+UXTerm*faceName:        Source Code Pro Semibold
+! UXTerm*faceName:      Neep
+! UXTerm*faceNam:       Ubuntu Mono derivative Powerline
+UXTerm*faceSize:        12
+! UXTerm*scaleHeight:   1.25
+UXTerm*scrollBar:       false
+UXTerm*visualBell:      true
+UXTerm*saveLines:       10000
+UXTerm*fastScroll:      true
+UXTerm*cursorBlink:     on
+UXTerm*cursorOnTime:    250
+UXTerm*cursorOffTime:   250
+UXTerm*colorBDMode:     false
+UXTerm*colorULMode:     false
+UXTerm*italicULMode:    false
 UXTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)\n Shift <KeyPress> Insert: insert-selection(CLIPBOARD)\n Super <Btn3Down>: insert-selection(CLIPBOARD)
 
-urxvt.font:		xft:Source Code Pro:size=12
-URxvt.boldFont:		xft:Source Code Pro:style=Bold:size=12
-URxvt.italicFont:	xft:Source Code Pro:style=Italic:size=12
-URxvt.boldItalicFont:	xft:Source Code Pro:style=Bold Italic:size=12
+urxvt.font:             xft:Source Code Pro:size=12
+urxvt.boldFont:         xft:Source Code Pro:style=Bold:size=12
+urxvt.italicFont:       xft:Source Code Pro:style=Italic:size=12
+urxvt.boldItalicFont:   xft:Source Code Pro:style=Bold Italic:size=12
 
-urxvt.letterSpace:	-1
-! urxvt.termName:		rxvt-256color
-urxvt.loginShell:	false
-urxvt.scrollBar:	false
-urxvt.saveLines:	65535
-urxvt.cursorBlink:	on
-urxvt.cursorOnTime:	250
-urxvt.cursorOffTime:	250
-urxvt.urgentOnBell:	true
-urxvt.secondaryScreen:	1
-urxvt.secondaryScroll:	0
+urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,urxvt-font-size/font-size
+
+urxvt.depth:            32
+urxvt.intensityStyles:  false
+urxvt.letterSpace:      -1
+! urxvt.termName:       rxvt-unicode
+urxvt.loginShell:       false
+urxvt.scrollBar:        false
+urxvt.saveLines:        65535
+urxvt.cursorBlink:      on
+urxvt.cursorOnTime:     250
+urxvt.cursorOffTime:    250
+urxvt.urgentOnBell:     true
+urxvt.secondaryScreen:  1
+urxvt.secondaryScroll:  0
+
+urxvt.matcher.button:   1
+urxvt.url-launcher:     /usr/bin/xdg-open
+urxvt.matcher.rend.0:   Uline fg6
+
 urxvt.clipboard.copycmd:  xsel -ob
 urxvt.clipboard.pastecmd: xsel -ob
-urxvt.keysym.S-Insert:	eval:paste_clipboard
+urxvt.keysym.S-Insert:  eval:paste_clipboard
 
-urxvt.perl-ext-common:	default,eval,matcher,selection-to-clipboard
-urxvt.matcher.button:	1
-urxvt.url-launcher:	/usr/bin/xdg-open
-URxvt.matcher.rend.0:	Uline fg6
+urxvt.keysym.M-S-F11:   perl:font-size:decrease
+urxvt.keysym.M-S-F12:   perl:font-size:increase
 
-! ! HIGHER BRIGHTNESS CONFIG
-! UXTerm*background: #202020
-! UXTerm*foreground: #909090
-! ! Black, Gray30
-! UXTerm*color0: #000000
-! UXTerm*color8: #404040
-! ! DarkRed, Firebrick
-! UXTerm*color1: #C01616
-! UXTerm*color9: #E03030
-! ! DarkOliveGreen, ForestGreen
-! UXTerm*color2: #107010
-! UXTerm*color10: #308030
-! ! DarkOrange, GoldenRod
-! UXTerm*color3: #F07000
-! UXTerm*color11: #FF8010
-! ! Navy, RoyalBlue4
-! UXTerm*color4: #2626C0
-! UXTerm*color12: #2A3AC0
-! ! DeepPink, DarkVioletRed
-! UXTerm*color5: #962076
-! UXTerm*color13: #E020A0
-! ! DeepSkyBlue4
-! UXTerm*color6: #4050B0
-! UXTerm*color14: #5060C0
-! ! SlateGray
-! UXTerm*color7: #708090
-! UXTerm*color15: #90A0B0
+urxvt.keysym.M-S-F9:    command:\033]10;#657b83\007\033]11;#fdf6e3\007\033]708;#fdf6e3\007\033]12;#586e75\007\033]13;#586e75\007\033]4;0;#073642\007\033]4;1;#dc322f\007\033]4;2;#859900\007\033]4;3;#b58900\007\033]4;4;#268bd2\007\033]4;5;#d33682\007\033]4;6;#2aa198\007\033]4;7;#eee8d5\007\033]4;8;#002b36\007\033]4;9;#cb4b16\007\033]4;10;#586e75\007\033]4;11;#657b83\007\033]4;12;#839496\007\033]4;13;#6c71c4\007\033]4;14;#93a1a1\007\033]4;15;#fdf6e3\007
+urxvt.keysym.M-S-F10:   command:\033]10;#839496\007\033]11;#002b36\007\033]708;#002b36\007\033]12;#93a1a1\007\033]13;#93a1a1\007\033]4;7;#073642\007\033]4;1;#dc322f\007\033]4;2;#859900\007\033]4;3;#b58900\007\033]4;4;#268bd2\007\033]4;5;#d33682\007\033]4;6;#2aa198\007\033]4;0;#eee8d5\007\033]4;15;#002b36\007\033]4;9;#cb4b16\007\033]4;14;#586e75\007\033]4;12;#657b83\007\033]4;11;#839496\007\033]4;13;#6c71c4\007\033]4;10;#93a1a1\007\033]4;8;#fdf6e3\007
 
+! LIGHT
+! \033]10;#657b83\007
+! \033]11;#fdf6e3\007
+! \033]708;#fdf6e3\007
+! \033]12;#586e75\007
+! \033]13;#586e75\007
+! \033]4;0;#073642\007
+! \033]4;1;#dc322f\007
+! \033]4;2;#859900\007
+! \033]4;3;#b58900\007
+! \033]4;4;#268bd2\007
+! \033]4;5;#d33682\007
+! \033]4;6;#2aa198\007
+! \033]4;7;#eee8d5\007
+! \033]4;8;#002b36\007
+! \033]4;9;#cb4b16\007
+! \033]4;10;#586e75\007
+! \033]4;11;#657b83\007
+! \033]4;12;#839496\007
+! \033]4;13;#6c71c4\007
+! \033]4;14;#93a1a1\007
+! \033]4;15;#fdf6e3\007
 
-! ! HIGHER BRIGHTNESS CONFIG
-! URxvt*background: #202020
-! URxvt*foreground: #909090
-! ! Black, Gray30
-! URxvt*color0: #000000
-! URxvt*color8: #404040
-! ! DarkRed, Firebrick
-! URxvt*color1: #C01616
-! URxvt*color9: #E03030
-! ! DarkOliveGreen, ForestGreen
-! URxvt*color2: #107010
-! URxvt*color10: #308030
-! ! DarkOrange, GoldenRod
-! URxvt*color3: #F07000
-! URxvt*color11: #FF8010
-! ! Navy, RoyalBlue4
-! URxvt*color4: #2626C0
-! URxvt*color12: #2A3AC0
-! ! DeepPink, DarkVioletRed
-! URxvt*color5: #B020A0
-! URxvt*color13: #E020A0
-! ! DeepSkyBlue4
-! URxvt*color6: #4050B0
-! URxvt*color14: #5060C0
-! ! SlateGray
-! URxvt*color7: #708090
-! URxvt*color15: #90A0B0
-
-#include ".config/solarized-light.Xresources"
+! DARK
+! \033]10;#839496\007
+! \033]11;#002b36\007
+! \033]708;#002b36\007
+! \033]12;#93a1a1\007
+! \033]13;#93a1a1\007
+! \033]4;7;#073642\007
+! \033]4;1;#dc322f\007
+! \033]4;2;#859900\007
+! \033]4;3;#b58900\007
+! \033]4;4;#268bd2\007
+! \033]4;5;#d33682\007
+! \033]4;6;#2aa198\007
+! \033]4;0;#eee8d5\007
+! \033]4;15;#002b36\007
+! \033]4;9;#cb4b16\007
+! \033]4;14;#586e75\007
+! \033]4;12;#657b83\007
+! \033]4;11;#839496\007
+! \033]4;13;#6c71c4\007
+! \033]4;10;#93a1a1\007
+! \033]4;8;#fdf6e3\007
