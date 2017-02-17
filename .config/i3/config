@@ -9,6 +9,17 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+new_window pixel 2
+hide_edge_borders smart
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #000000 #000000 #000000 #ff0000   #0080ff
+client.focused_inactive #000000 #000000 #000000 #ff0000   #222222
+client.unfocused        #000000 #000000 #000000 #ff0000   #222222
+client.urgent           #000000 #000000 #000000 #ff0000   #ff0000
+client.placeholder      #000000 #000000 #000000 #ff0000   #000000
+client.background       #ffffff
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -48,51 +59,24 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
 bindsym XF86MonBrightnessUp exec /home/cunha/bin/bright up
 bindsym XF86MonBrightnessDown exec /home/cunha/bin/bright down
 
-
-# kill focused window
-# bindsym $mod+Shift+q kill
 bindsym $mod+F4 kill
-
-# start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+# bindsym $mod+h focus left
+# bindsym $mod+j focus down
+# bindsym $mod+k focus up
+# bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+# bindsym $mod+Shift+h move left
+# bindsym $mod+Shift+j move down
+# bindsym $mod+Shift+k move up
+# bindsym $mod+Shift+l move right
 bindsym $mod+semicolon move container to output right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+5 split h
+bindsym $mod+apostrophe split v
 
-# split in horizontal orientation
-bindsym $mod+minus split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+z fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
@@ -112,7 +96,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
+bindsym $mod+1 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 1; exec --no-startup-id chromium --enable-remote-extensions\\""
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
@@ -128,7 +112,7 @@ bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
+# bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8

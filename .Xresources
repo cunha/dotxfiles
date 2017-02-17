@@ -31,10 +31,10 @@ UXTerm*colorULMode:     false
 UXTerm*italicULMode:    false
 UXTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)\n Shift <KeyPress> Insert: insert-selection(CLIPBOARD)\n Super <Btn3Down>: insert-selection(CLIPBOARD)
 
-urxvt.font:             xft:Source Code Pro:size=12
-urxvt.boldFont:         xft:Source Code Pro:style=Bold:size=12
-urxvt.italicFont:       xft:Source Code Pro:style=Italic:size=12
-urxvt.boldItalicFont:   xft:Source Code Pro:style=Bold Italic:size=12
+urxvt.font:             xft:Source Code Pro:size=16
+urxvt.boldFont:         xft:Source Code Pro:style=Bold:size=16
+urxvt.italicFont:       xft:Source Code Pro:style=Italic:size=16
+urxvt.boldItalicFont:   xft:Source Code Pro:style=Bold Italic:size=16
 
 urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,urxvt-font-size/font-size
 
@@ -51,6 +51,8 @@ urxvt.cursorOffTime:    250
 urxvt.urgentOnBell:     true
 urxvt.secondaryScreen:  1
 urxvt.secondaryScroll:  0
+urxvt.jumpScroll:       true
+urxvt.skipScroll:       true
 
 urxvt.matcher.button:   1
 urxvt.url-launcher:     /usr/bin/xdg-open
@@ -59,6 +61,11 @@ urxvt.matcher.rend.0:   Uline fg6
 urxvt.clipboard.copycmd:  xsel -ob
 urxvt.clipboard.pastecmd: xsel -ob
 urxvt.keysym.S-Insert:  eval:paste_clipboard
+! urxvt.keysym.C-BackSpace: \033[33~ ! ([33~ is F19)
+urxvt.keysym.Mod4-h: \033[21~h
+urxvt.keysym.Mod4-j: \033[21~j
+urxvt.keysym.Mod4-k: \033[21~k
+urxvt.keysym.Mod4-l: \033[21~l
 
 urxvt.keysym.M-S-F11:   perl:font-size:decrease
 urxvt.keysym.M-S-F12:   perl:font-size:increase

@@ -1,5 +1,8 @@
+# setxkbmap -layout us -option ctrl:swapcaps -option caps:escape -option ctrl:swap_rwin_rctl
 setxkbmap -layout us -option ctrl:swapcaps -option ctrl:swap_rwin_rctl
 xcape -e "Control_L=Escape"
+
+export TZ='America/Sao_Paulo'
 
 export GTK_IM_MODULE=xim
 export XMODIFIERS="@im=none"
