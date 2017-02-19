@@ -36,7 +36,7 @@ urxvt.boldFont:         xft:Source Code Pro:style=Bold:size=16
 urxvt.italicFont:       xft:Source Code Pro:style=Italic:size=16
 urxvt.boldItalicFont:   xft:Source Code Pro:style=Bold Italic:size=16
 
-urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,urxvt-font-size/font-size
+urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,font-size
 
 urxvt.depth:            32
 urxvt.intensityStyles:  false
@@ -67,8 +67,8 @@ urxvt.keysym.Mod4-j: \033[21~j
 urxvt.keysym.Mod4-k: \033[21~k
 urxvt.keysym.Mod4-l: \033[21~l
 
-urxvt.keysym.M-S-F11:   perl:font-size:decrease
-urxvt.keysym.M-S-F12:   perl:font-size:increase
+urxvt.keysym.M-S-F11:   font-size:decrease
+urxvt.keysym.M-S-F12:   font-size:increase
 
 urxvt.keysym.M-S-F9:    command:\033]10;#657b83\007\033]11;#fdf6e3\007\033]708;#fdf6e3\007\033]12;#586e75\007\033]13;#586e75\007\033]4;0;#073642\007\033]4;1;#dc322f\007\033]4;2;#859900\007\033]4;3;#b58900\007\033]4;4;#268bd2\007\033]4;5;#d33682\007\033]4;6;#2aa198\007\033]4;7;#eee8d5\007\033]4;8;#002b36\007\033]4;9;#cb4b16\007\033]4;10;#586e75\007\033]4;11;#657b83\007\033]4;12;#839496\007\033]4;13;#6c71c4\007\033]4;14;#93a1a1\007\033]4;15;#fdf6e3\007
 urxvt.keysym.M-S-F10:   command:\033]10;#839496\007\033]11;#002b36\007\033]708;#002b36\007\033]12;#93a1a1\007\033]13;#93a1a1\007\033]4;7;#073642\007\033]4;1;#dc322f\007\033]4;2;#859900\007\033]4;3;#b58900\007\033]4;4;#268bd2\007\033]4;5;#d33682\007\033]4;6;#2aa198\007\033]4;0;#eee8d5\007\033]4;15;#002b36\007\033]4;9;#cb4b16\007\033]4;14;#586e75\007\033]4;12;#657b83\007\033]4;11;#839496\007\033]4;13;#6c71c4\007\033]4;10;#93a1a1\007\033]4;8;#fdf6e3\007

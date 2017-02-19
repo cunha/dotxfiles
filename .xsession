@@ -14,7 +14,7 @@ export MOZ_USE_OMTC=1
 # xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
 
 xrdb ~/.Xresources
-xrdb -merge ~/.config/solarized-dark.Xresources
+xrdb -merge ~/.config/solarized-light.Xresources
 xset -b
 
 xsetroot -mod 2 2 -fg black -bg midnightblue
