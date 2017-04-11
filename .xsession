@@ -3,7 +3,10 @@ setxkbmap -layout us -option ctrl:swapcaps -option ctrl:swap_rwin_rctl
 xcape -e "Control_L=Escape"
 
 export TZ='America/Sao_Paulo'
+# export TZ='Australia/Sydney'
+# export CHROMIUM_FLAGS="--enable-remote-extensions"
 
+# to get proper cedilla in ibus, install ibus-table-compose
 export GTK_IM_MODULE=xim
 export XMODIFIERS="@im=none"
 export MOZ_USE_OMTC=1
@@ -36,3 +39,4 @@ xsetroot -mod 2 2 -fg black -bg midnightblue
 # startkde
 i3 -V >> ~/.cache/i3.log 2>&1
 # fluxbox -rc "/home/cunha/.config/fluxbox/init" -log "/home/cunha/.cache/fluxbox.log"
+# exec gnome-session
