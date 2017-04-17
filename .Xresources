@@ -31,10 +31,10 @@ UXTerm*colorULMode:     false
 UXTerm*italicULMode:    false
 UXTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)\n Shift <KeyPress> Insert: insert-selection(CLIPBOARD)\n Super <Btn3Down>: insert-selection(CLIPBOARD)
 
-urxvt.font:             xft:Source Code Pro:size=16
-urxvt.boldFont:         xft:Source Code Pro:style=Bold:size=16
-urxvt.italicFont:       xft:Source Code Pro:style=Italic:size=16
-urxvt.boldItalicFont:   xft:Source Code Pro:style=Bold Italic:size=16
+urxvt.font:             xft:Source Code Pro:size=14
+urxvt.boldFont:         xft:Source Code Pro:style=Bold:size=14
+urxvt.italicFont:       xft:Source Code Pro:style=Italic:size=14
+urxvt.boldItalicFont:   xft:Source Code Pro:style=Bold Italic:size=14
 
 urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,font-size
 

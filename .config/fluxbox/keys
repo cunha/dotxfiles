@@ -27,15 +27,15 @@ Mod1 Tab :NextWindow (workspace=[current])
 Mod4 d :ShowDesktop
 
 Mod4 h :Minimize
-Mod4 k :MaximizeHorizontal
-Mod4 l :MaximizeVertical
+Mod4 k :MaximizeVertical
+Mod4 l :MaximizeHorizontal
 Mod4 semicolon :Maximize
 Mod4 Shift semicolon :FullScreen
 
 Mod4 minus :MacroCmd {SendToNextHead} {Exec centerwindow left}
 Mod4 i :Exec centerwindow left
 Mod4 o :Exec centerwindow right
-Mod4 shift j :MacroCmd {ResizeTo 800 950} {MoveTo 0 0 TopLeft} {MaximizeHorizontal} 
+# Mod4 shift j :MacroCmd {ResizeTo 800 950} {MoveTo 0 0 TopLeft} {MaximizeHorizontal} 
 # Mod4 shift k :MacroCmd {MoveTo 0 0 BottomLeft} {ResizeTo 800 950} {MaximizeHorizontal} 
 Mod4 bracketleft :MacroCmd {MaximizeVertical} {MoveTo 0 0 TopLeft}
 Mod4 shift bracketleft :MacroCmd {ResizeTo 1150 700} {MaximizeVertical} {MoveTo 0 0 TopLeft}
@@ -48,20 +48,18 @@ Mod4 a :ToggleCmd {SetLayer top} {SetLayer normal}
 
 Mod4 slash :Exec xset dpms force off
 
-Mod4 r :Exec fbrun -font "Source Code Pro for Powerline-8"
-Mod4 q :If {Some Matches (Title=^psychopad:main:.*)} {NextWindow (Title=^psychopad:main:.*)} {Exec uxterm -e /usr/bin/tmux new-session -A -s main}
-Mod4 Shift q :Exec uxterm -e /usr/bin/zsh -c "ssh george"
-Mod4 w :Exec uxterm
-# Mod4 e :Exec uxterm -g 128x28 -e /usr/bin/zsh -c ranger
-Mod4 e :Exec xfe
+Mod4 r :Exec fbrun -font "Source Code Pro-8"
+Mod4 q :If {Some Matches (Title=^xps:main:.*)} {NextWindow (Title=^psychopad:main:.*)} {Exec urxvt -e /usr/bin/tmux new-session -A -s main}
+Mod4 w :Exec urxvt
+# Mod4 e :Exec urxvt -g 128x28 -e /usr/bin/zsh -c ranger
+Mod4 e :Exec urxvt -e /usr/bin/zsh -c ranger
 Mod4 f :If {Some Matches (Navigator)} {NextWindow (Navigator)} {Exec iceweasel}
-Mod4 g :If {Some Matches (Chromium)} {NextWindow (Chromium)} {Exec chromium}
-Mod4 t :If {Some Matches (Mail)} {NextWindow (Mail)} {Exec icedove}
+Mod4 g :If {Some Matches (Chromium)} {NextWindow (Chromium)} {Exec chromium --enable-remote-extensions}
+# Mod4 t :If {Some Matches (Mail)} {NextWindow (Mail)} {Exec icedove}
 
 Mod4 BackSpace :Exec swapintl.sh
 
 Mod4 F11 :Restart
-Mod4 F12 :Exec /home/cunha/bin/xbig
 
 XF86AudioPlay :Exec mocp --play
 XF86AudioStop :Exec mocp --stop
