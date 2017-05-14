@@ -1,6 +1,7 @@
 # setxkbmap -layout us -option ctrl:swapcaps -option caps:escape -option ctrl:swap_rwin_rctl
 
-export TZ='America/Sao_Paulo'
+# export TZ='America/Sao_Paulo'
+export TZ='America/Los_Angeles'
 # export TZ='Australia/Sydney'
 # export CHROMIUM_FLAGS="--enable-remote-extensions"
 
@@ -19,7 +20,7 @@ xcape -e "Control_L=Escape"
 # xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
 
 xrdb ~/.Xresources
-xrdb -merge ~/.config/solarized-light.Xresources
+xrdb -merge ~/.config/solarized-dark.Xresources
 xset -b
 
 xsetroot -mod 2 2 -fg black -bg midnightblue
@@ -41,5 +42,11 @@ pasystray &
 
 # startkde
 # i3 -V >> ~/.cache/i3.log 2>&1
+
+xrandr --output eDP-1 --auto
+xrandr --dpi 192
+gsettings set org.gnome.desktop.interface text-scaling-factor 2
+gsettings set org.gnome.desktop.interface cursor-size 48
+
 exec fluxbox -rc "/home/cunha/.config/fluxbox/init" -log "/home/cunha/.cache/fluxbox.log"
 # exec gnome-session
