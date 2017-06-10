@@ -62,16 +62,17 @@ bindsym XF86MonBrightnessDown exec /home/cunha/bin/bright down
 bindsym $mod+F4 kill
 bindsym $mod+d exec dmenu_run
 
-# bindsym $mod+h focus left
-# bindsym $mod+j focus down
-# bindsym $mod+k focus up
-# bindsym $mod+l focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # bindsym $mod+Shift+h move left
 # bindsym $mod+Shift+j move down
 # bindsym $mod+Shift+k move up
 # bindsym $mod+Shift+l move right
 bindsym $mod+semicolon move container to output right
+bindsym $mod+Shift+semicolon move workspace to output right
 
 bindsym $mod+Shift+5 split h
 bindsym $mod+apostrophe split v
@@ -120,11 +121,11 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+F11 reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+# bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+F12 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
@@ -156,10 +157,10 @@ exec --no-startup-id i3-msg 'exec gsettings set org.gnome.settings-daemon.plugin
 exec --no-startup-id i3-msg 'exec exec /usr/bin/nm-applet'
 exec --no-startup-id i3-msg 'exec exec /usr/bin/pasystray'
 exec --no-startup-id i3-msg 'exec exec /usr/bin/owncloud --logfile /home/cunha/.cache/owncloud.log'
-# exec --no-startup-id i3-msg 'exec exec /usr/bin/redshift -c .config/redshift.conf'
+exec --no-startup-id i3-msg 'exec exec /usr/bin/redshift -c .config/redshift.conf'
 # exec --no-startup-id i3-msg 'exec /usr/bin/dropbox start'
 
 # for_window [title='ssh-agent'] floating enable
-exec --no-startup-id i3-msg 'exec exec urxvt -fs 16 -e /usr/bin/zsh -c ssh-add .ssh/muxops_id_rsa .ssh/id_rsa'
+# exec --no-startup-id i3-msg 'exec exec urxvt -fs 16 -e /usr/bin/zsh -c ssh-add .ssh/muxops_id_rsa .ssh/id_rsa'
 
-
+assign [class="com-trollworks-gcs-app-GCS"] 3

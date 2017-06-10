@@ -78,7 +78,7 @@ ShowStreamErrors	= no
 Mp3IgnoreCRCErrors	= yes
 
 # Turn on repeat.
-Repeat			= no
+Repeat			= yes
 
 # Turn on shuffle.
 Shuffle			= no
@@ -197,7 +197,7 @@ XTerms += eterm
 
 # Theme file. This can be absolute path or relative to
 # /usr/share/moc/themes/ (depends on installation prefix) or ~/.moc/themes/
-Theme			= transparent-background
+Theme			= /home/cunha/.moc/solarized_theme
 
 # The theme used when running on an xterm.
 # XTermTheme		= transparent-background
@@ -478,7 +478,7 @@ CanStartInPlaylist	= yes
 SetXtermTitle		= no
 
 # Set the terminal title when running under screen.
-#SetScreenTitle		= yes
+SetScreenTitle		= no
 
 # Display full paths instead of just file names in the playlist.
 #PlaylistFullPaths	= yes
@@ -603,7 +603,7 @@ SetXtermTitle		= no
 # Example:
 #
 #OnSongChange = "/home/jack/.moc/myscript %a %r"
-OnSongChange = "/usr/lib/lastfmsubmitd/lastfmsubmit --artist %a --title %t --length %d --album %b"
+# OnSongChange = "/usr/lib/lastfmsubmitd/lastfmsubmit --artist %a --title %t --length %d --album %b"
 
 # RepeatSongChange.
 # If 'yes' then MOC will execute the 'OnSongChange' command every time a

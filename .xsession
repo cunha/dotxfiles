@@ -1,7 +1,5 @@
-# setxkbmap -layout us -option ctrl:swapcaps -option caps:escape -option ctrl:swap_rwin_rctl
-
-# export TZ='America/Sao_Paulo'
-export TZ='America/Los_Angeles'
+export TZ='America/Sao_Paulo'
+# export TZ='America/Los_Angeles'
 # export TZ='Australia/Sydney'
 # export CHROMIUM_FLAGS="--enable-remote-extensions"
 
@@ -11,7 +9,6 @@ export XMODIFIERS="@im=none"
 export MOZ_USE_OMTC=1
 
 export $(/usr/bin/gnome-keyring-daemon --start --components=ssh,secrets)
-setxkbmap -layout us -option ctrl:swapcaps -option ctrl:swap_rwin_rctl
 xcape -e "Control_L=Escape"
 
 # thinkpad mouse wheel
@@ -28,9 +25,9 @@ xsetroot -mod 2 2 -fg black -bg midnightblue
 # clipit &
 # dropbox start &
 # insync start &
-nm-applet &
-owncloud --logfile /home/cunha/.cache/owncloud.log &
-pasystray &
+# nm-applet &
+# owncloud --logfile /home/cunha/.cache/owncloud.log &
+# pasystray &
 
 # tmux new-session -d -s main
 # tmux new-window -t main:1
@@ -40,13 +37,26 @@ pasystray &
 # wicd-gtk &
 # razercfg -r 3
 
-# startkde
-# i3 -V >> ~/.cache/i3.log 2>&1
+# xrandr --output eDP-1 --auto
+# xrandr --dpi 192
 
-xrandr --output eDP-1 --auto
-xrandr --dpi 192
-gsettings set org.gnome.desktop.interface text-scaling-factor 2
-gsettings set org.gnome.desktop.interface cursor-size 48
+if xrandr --query | grep -Ee "^DP-1[^ ]* connected" > /dev/null ; then
+	xrandr --output eDP-1 --off
+	sleep 1s
+	xrandr --output DP-1-1 --pos 0x0 --rotate left --auto
+	sleep 1s
+	xrandr --output DP-1-3 --pos 1080x300 --auto
+	sleep 1s
+	xrandr --dpi 96
+else
+	xrandr --dpi 192
+# 	gsettings set org.gnome.desktop.interface text-scaling-factor 2
+# 	gsettings set org.gnome.desktop.interface cursor-size 48
+fi
 
-exec fluxbox -rc "/home/cunha/.config/fluxbox/init" -log "/home/cunha/.cache/fluxbox.log"
+setxkbmap -layout us -option ctrl:swapcaps -option ctrl:swap_rwin_rctl
+i3 -V >> ~/.cache/i3.log 2>&1
+
+# exec fluxbox -rc "/home/cunha/.config/fluxbox/init" -log "/home/cunha/.cache/fluxbox.log"
 # exec gnome-session
+# startkde
