@@ -1,14 +1,16 @@
 export TZ='America/Sao_Paulo'
 # export TZ='America/Los_Angeles'
 # export TZ='Australia/Sydney'
-# export CHROMIUM_FLAGS="--enable-remote-extensions"
 
 # to get proper cedilla in ibus, install ibus-table-compose
 export GTK_IM_MODULE=xim
 export XMODIFIERS="@im=none"
 export MOZ_USE_OMTC=1
+# export CHROMIUM_FLAGS="--enable-remote-extensions"
 
 export $(/usr/bin/gnome-keyring-daemon --start --components=ssh,secrets)
+
+setxkbmap -layout us -option ctrl:swapcaps -option ctrl:swap_rwin_rctl
 xcape -e "Control_L=Escape"
 
 # thinkpad mouse wheel
@@ -35,10 +37,6 @@ xsetroot -mod 2 2 -fg black -bg midnightblue
 
 # uxterm -e /usr/bin/zsh -c ssh-add .ssh/muxops_id_rsa .ssh/id_rsa &
 # wicd-gtk &
-# razercfg -r 3
-
-# xrandr --output eDP-1 --auto
-# xrandr --dpi 192
 
 if xrandr --query | grep -Ee "^DP-1[^ ]* connected" > /dev/null ; then
 	xrandr --output eDP-1 --off
@@ -50,11 +48,8 @@ if xrandr --query | grep -Ee "^DP-1[^ ]* connected" > /dev/null ; then
 	xrandr --dpi 96
 else
 	xrandr --dpi 192
-# 	gsettings set org.gnome.desktop.interface text-scaling-factor 2
-# 	gsettings set org.gnome.desktop.interface cursor-size 48
 fi
 
-setxkbmap -layout us -option ctrl:swapcaps -option ctrl:swap_rwin_rctl
 i3 -V >> ~/.cache/i3.log 2>&1
 
 # exec fluxbox -rc "/home/cunha/.config/fluxbox/init" -log "/home/cunha/.cache/fluxbox.log"
