@@ -1,8 +1,10 @@
 import json
+import os
 import subprocess
 import sys
 
 def get_output(cmd):
+    sys.stdout.write('%s\n' % cmd)
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     out = process.communicate()[0].decode('utf-8')
     process.stdout.close()
@@ -38,6 +40,12 @@ def get_matches():
 
 def main():
     sys.stdout.write('[%s] [%s] [%s]' % (sys.argv[0], sys.argv[1], sys.argv[2]))
+    if not os.access('/usr/bin/xdotool', os.X_OK):
+        sys.stdout.write('missing xdotool\n')
+        subprocess.check_call(['i3-nagbar', '-t', 'warning', '-m',
+                'You need xdotool to use run-of-focus.py!'])
+        sys.exit(1)
+
     matches = get_matches()
     # Sort the list by window IDs
     matches = [(match['window'], match) for match in matches]

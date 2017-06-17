@@ -97,7 +97,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
+bindsym $mod+1 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 1; exec --no-startup-id chromium --enable-remote-extensions\\""
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
@@ -106,7 +106,7 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
-bindsym $mod+0 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 10; exec --no-startup-id chromium --enable-remote-extensions\\""
+bindsym $mod+0 workspace 0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1

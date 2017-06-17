@@ -3,15 +3,15 @@ set -ex
 
 case "$1" in
 800)
-	xrandr --output VGA1 --mode 800x600 --auto
-	xrandr --output LVDS1 --mode 800x600 --auto
+	xrandr --output VGA-1 --mode 800x600 --auto
+	xrandr --output LVDS-1 --mode 800x600 --auto
 	;;
 768)
-	xrandr --output VGA1 --mode 1360x768 --auto
-	xrandr --output LVDS1 --mode 1360x768 --auto
+	xrandr --output VGA-1 --mode 1360x768 --auto
+	xrandr --output LVDS-1 --mode 1360x768 --auto
 	;;
 1024|*)
-	xrandr --output VGA1 --mode 1024x768 --auto
-	xrandr --output LVDS1 --mode 1024x768 --auto
+	xrandr --output VGA-1 --mode 1024x768 --auto
+	xrandr --output LVDS-1 --mode 1024x768 --auto
 	;;
 esac
