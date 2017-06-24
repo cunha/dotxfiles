@@ -38,9 +38,9 @@ Mod4 o :Exec centerwindow right
 # Mod4 shift j :MacroCmd {ResizeTo 800 950} {MoveTo 0 0 TopLeft} {MaximizeHorizontal} 
 # Mod4 shift k :MacroCmd {MoveTo 0 0 BottomLeft} {ResizeTo 800 950} {MaximizeHorizontal} 
 Mod4 bracketleft :MacroCmd {MaximizeVertical} {MoveTo 0 0 TopLeft}
-Mod4 shift bracketleft :MacroCmd {ResizeTo 1150 700} {MaximizeVertical} {MoveTo 0 0 TopLeft}
+Mod4 shift bracketleft :MacroCmd {ResizeTo 960 700} {MaximizeVertical} {MoveTo 0 0 TopLeft}
 Mod4 bracketright :MacroCmd {MaximizeVertical} {MoveTo 0 0 TopRight}
-Mod4 shift bracketright :MacroCmd {ResizeTo 1150 700} {MaximizeVertical} {MoveTo 0 0 TopRight}
+Mod4 shift bracketright :MacroCmd {ResizeTo 960 700} {MaximizeVertical} {MoveTo 0 0 TopRight}
 Mod4 a :ToggleCmd {SetLayer top} {SetLayer normal}
 
 # Mod4 backslash :MacroCmd {ResizeTo 958 700} {MoveTo 0 0 TopRight}
