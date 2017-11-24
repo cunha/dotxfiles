@@ -36,7 +36,8 @@ urxvt.boldFont:         xft:Source Code Pro:style=Bold:size=12
 urxvt.italicFont:       xft:Source Code Pro:style=Italic:size=12
 urxvt.boldItalicFont:   xft:Source Code Pro:style=Bold Italic:size=12
 
-urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,font-size
+urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,font-size,osc52
+urxvt.perl-lib:         /home/cunha/.config/urxvt-perl
 
 urxvt.depth:            32
 urxvt.intensityStyles:  false
@@ -58,8 +59,9 @@ urxvt.matcher.button:   1
 urxvt.url-launcher:     /usr/bin/xdg-open
 urxvt.matcher.rend.0:   Uline fg6
 
-urxvt.clipboard.copycmd:  xsel -ob
-urxvt.clipboard.pastecmd: xsel -ob
+URxvt.clipboard.autocopy: true
+urxvt.clipboard.copycmd:  xclip -i -selection clipboard
+urxvt.clipboard.pastecmd: xclip -o -selection clipboard
 urxvt.keysym.S-Insert:  eval:paste_clipboard
 ! urxvt.keysym.C-BackSpace: \033[33~ ! ([33~ is F19)
 urxvt.keysym.Mod4-h: \033[21~h
