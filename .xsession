@@ -19,6 +19,7 @@ fi
 export TZ='America/Sao_Paulo'
 # export TZ='America/Los_Angeles'
 # export TZ='Australia/Sydney'
+# export TZ='Asia/Singapore'
 
 # to get proper cedilla in ibus, install ibus-table-compose
 export GTK_IM_MODULE=xim
