@@ -76,8 +76,7 @@ bindsym $mod+Shift+j move workspace to output down
 bindsym $mod+Shift+k move workspace to output up
 bindsym $mod+Shift+l move workspace to output right
 
-bindsym $mod+Shift+5 split h
-bindsym $mod+apostrophe split v
+bindsym $mod+apostrophe split toggle
 
 bindsym $mod+z fullscreen toggle
 
@@ -173,3 +172,4 @@ bar {
 assign [class="com-trollworks-gcs-app-GCS"] 7
 assign [class="VirtualBox"] 7
 assign [class="code"] 3
+for_window [class="Steam"] floating enable
