@@ -171,5 +171,6 @@ bar {
 
 assign [class="com-trollworks-gcs-app-GCS"] 7
 assign [class="VirtualBox"] 7
+assign [class="Spotify"] 8
 assign [class="code"] 3
 for_window [class="Steam"] floating enable
