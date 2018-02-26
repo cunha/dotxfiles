@@ -1,4 +1,0 @@
-vim tint2rc2
-mv tint2rc tint2rc.bkp
-mv tint2rc2 tint2rc
-mv tint2rc.bkp tint2rc
