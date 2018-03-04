@@ -7,8 +7,10 @@ if xrandr --query | grep -Ee "^DP-1[^ ]* connected" > /dev/null ; then
 	xrandr --output DP-1-3 --pos 1080x300 --auto
 	sleep 1s
 	xrandr --dpi 96
+	export GDK_SCALE=1
 else
 	xrandr --dpi 192
+	export GDK_SCALE=2
 fi
 
 # openbox-session reads variables from ~/.config/openbox/environment
