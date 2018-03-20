@@ -1,2 +1,0 @@
-#!/bin/sh
-xrdb -merge $HOME/.config/solarized-dark.Xresources
