@@ -14,14 +14,16 @@ urxvt*cursorColor:           S_base1
 urxvt*pointerColorBackground:S_base01
 urxvt*pointerColorForeground:S_base1
 
-#define S_yellow        #b58900
+#define S_yellow_bkp    #b58900
+#define S_yellow        #b68000
 #define S_orange        #cb4b16
 #define S_red           #dc322f
 #define S_magenta       #d33682
 #define S_violet        #6c71c4
 #define S_blue          #268bd2
 #define S_cyan          #2aa198
-#define S_green         #859900
+#define S_green_bkp     #859900
+#define S_green         #00ad40
 
 !! black dark/light
 urxvt*color7:                S_base02
