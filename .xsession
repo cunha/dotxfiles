@@ -19,7 +19,7 @@ fi
 # exec openbox-session
 
 export TZ='America/Sao_Paulo'
-# export TZ='America/Los_Angeles'
+# export TZ='Europe/Berlin'
 # export TZ='Australia/Sydney'
 # export TZ='Asia/Singapore'
 
