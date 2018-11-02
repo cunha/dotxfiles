@@ -1,4 +1,4 @@
-configuring screens before firing X:
+# configuring screens before firing X:
 if xrandr --query | grep -Ee "^DP-1[^ ]* connected" > /dev/null ; then
 	xrandr --output eDP-1 --off
 	sleep 1s
@@ -7,10 +7,10 @@ if xrandr --query | grep -Ee "^DP-1[^ ]* connected" > /dev/null ; then
 	xrandr --output DP-1-3 --pos 1080x300 --auto
 	sleep 1s
 	xrandr --dpi 96
-	export GDK_SCALE=1
+	export GDK_DPI_SCALE=1
 else
-	xrandr --dpi 192
-	export GDK_SCALE=2
+	xrandr --dpi 144
+	export GDK_DPI_SCALE=1.5
 fi
 
 # openbox-session reads variables from ~/.config/openbox/environment
@@ -29,6 +29,7 @@ export XMODIFIERS="@im=none"
 export MOZ_USE_OMTC=1
 # export CHROMIUM_FLAGS="--enable-remote-extensions"
 # export $(/usr/bin/gnome-keyring-daemon --start --components=ssh,secrets)
+export ELECTRON_TRASH=trash-cli
 
 # thinkpad mouse wheel
 # xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1

@@ -7,7 +7,7 @@ general {
 }
 
 order += "volume master"
-order += "wireless wlp58s0"
+order += "wireless wlp2s0"
 order += "battery 0"
 order += "cpu_usage"
 order += "cpu_temperature 0"
@@ -23,14 +23,14 @@ volume master {
 	separator_block_width = 20
 }
 
-wireless wlp58s0 {
+wireless wlp2s0 {
 	format_up = " %quality %essid"
 	format_down = " down"
 	separator_block_width = 20
 }
 
 cpu_usage {
-	format = "  %usage"
+	format = "  %usage"
 	degraded_threshold = 25
 	max_threshold = 75
 	separator = false
@@ -41,7 +41,7 @@ cpu_temperature 0 {
 	max_threshold = 70
 	format = " %degrees °C"
 	format_above_threshold = " %degrees °C"
-	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input"
 	separator_block_width = 20
 }
 

@@ -42,17 +42,18 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+w exec --no-startup-id exec /usr/bin/urxvt
-bindsym $mod+slash exec xset dpms force off
+bindsym $mod+slash exec /home/cunha/bin/delay-monitor-off.sh
 bindsym $mod+BackSpace exec /home/cunha/bin/swapintl.sh
 
-bindsym XF86AudioPlay exec "mocp --play"
-bindsym XF86AudioStop exec "mocp --stop"
-bindsym XF86AudioNext exec "mocp --next"
-bindsym XF86AudioPrev exec "mocp --prev"
+# bindsym XF86AudioPlay exec "mocp --play"
+# bindsym XF86AudioStop exec "mocp --stop"
+# bindsym XF86AudioNext exec "mocp --next"
+# bindsym XF86AudioPrev exec "mocp --prev"
 # bindsym XF86AudioMute exec "amixer sset Master,0 toggle"
 # bindsym XF86AudioRaiseVolume exec "amixer sset Master,0 5+"
 # bindsym XF86AudioLowerVolume exec "amixer sset Master,0 5-"
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +3%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -3%
 
@@ -67,14 +68,19 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
+bindsym $mod+left focus left
+bindsym $mod+down focus down
+bindsym $mod+up focus up
+bindsym $mod+right focus right
+
 # bindsym $mod+Shift+h move left
 # bindsym $mod+Shift+j move down
 # bindsym $mod+Shift+k move up
 # bindsym $mod+Shift+l move right
-bindsym $mod+Shift+h move workspace to output left
-bindsym $mod+Shift+j move workspace to output down
-bindsym $mod+Shift+k move workspace to output up
-bindsym $mod+Shift+l move workspace to output right
+bindsym $mod+Shift+h move container to output left
+bindsym $mod+Shift+j move container to output down
+bindsym $mod+Shift+k move container to output up
+bindsym $mod+Shift+l move container to output right
 
 bindsym $mod+semicolon split toggle
 
@@ -98,9 +104,9 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+0 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Firefox-esr\\" \\"workspace 0; exec --no-startup-id firefox-esr\\""
-bindsym $mod+1 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 1; exec --no-startup-id chromium --enable-remote-extensions\\""
-bindsym $mod+2 workspace 2
+bindsym $mod+0 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 0; exec --no-startup-id chromium --enable-remote-extensions\\""
+bindsym $mod+1 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Firefox-esr\\" \\"workspace 1; exec --no-startup-id firefox-esr\\""
+bindsym $mod+2 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Code\\" \\"workspace 2; exec --no-startup-id code\\""
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
@@ -114,7 +120,7 @@ bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
-# bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -142,6 +148,7 @@ mode "resize" {
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
         # back to normal: Enter or Escape
+        bindsym Mod4+r mode "default"
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
@@ -158,6 +165,8 @@ mode "moveit" {
     bindsym Down move down 20px
     bindsym Right move right 20px
     bindsym Mod4+m mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -172,20 +181,19 @@ bar {
 # exec --no-startup-id i3-msg 'exec exec /usr/bin/redshift -c .config/redshift.conf'
 # exec --no-startup-id i3-msg 'exec exec /usr/bin/setxkbmap -layout us -option ctrl:swapcaps -option ctrl:swap_rwin_rctl'
 
-# exec --no-startup-id i3-msg 'exec exec /usr/bin/nm-applet'
 # exec --no-startup-id i3-msg 'exec exec /usr/bin/pasystray'
 
-# exec --no-startup-id i3-msg 'exec exec /usr/bin/owncloud --logfile /home/cunha/.cache/owncloud.log'
-# exec --no-startup-id i3-msg 'exec exec /usr/bin/insync start'
-# exec --no-startup-id i3-msg 'exec /usr/bin/dropbox start'
-
+exec --no-startup-id i3-msg 'exec exec /usr/bin/nm-applet'
+exec --no-startup-id i3-msg 'exec exec /usr/bin/owncloud --logfile /home/cunha/.cache/owncloud.log'
+exec --no-startup-id i3-msg 'exec exec /usr/bin/insync start'
+exec --no-startup-id i3-msg 'exec /usr/bin/dropbox start'
 
 # for_window [title='ssh-agent'] floating enable
 # exec --no-startup-id i3-msg 'exec exec urxvt -fs 16 -e /usr/bin/zsh -c ssh-add .ssh/muxops_id_rsa .ssh/id_rsa'
 
-assign [class="com-trollworks-gcs-app-GCS"] 7
+# assign [class="com-trollworks-gcs-app-GCS"] 7
+assign [class="code"] 2
 assign [class="VirtualBox"] 7
-assign [class="Spotify"] 8
-assign [class="code"] 3
+# assign [class="Spotify"] 8
 # for_window [class="VirtualBox"] floating enable
-for_window [class="Steam"] floating enable
+# for_window [class="Steam"] floating enable
