@@ -18,7 +18,8 @@ fi
 # openbox-session runs processes in /etc/xdg/autostart and ~/.config/autostart
 # exec openbox-session
 
-export TZ='America/Sao_Paulo'
+export TZ='America/New_York'
+# export TZ='America/Sao_Paulo'
 # export TZ='Europe/Berlin'
 # export TZ='Australia/Sydney'
 # export TZ='Asia/Singapore'
