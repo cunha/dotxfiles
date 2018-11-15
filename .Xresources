@@ -10,9 +10,9 @@ Xft.rgba:       rgb
 *VT100*eightBitControl: false
 *VT100*eightBitOutput:  true
 XTerm*faceName:         Neep
-XTerm*faceSize:         13
+XTerm*faceSize:         14
 UXTerm*faceName:        Source Code Pro Semibold
-UXTerm*faceSize:        12
+UXTerm*faceSize:        14
 ! UXTerm*scaleHeight:   1.25
 UXTerm*scrollBar:       false
 UXTerm*visualBell:      true
@@ -29,7 +29,7 @@ UXTerm*translations:    #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_B
 urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,font-size,osc52
 urxvt.perl-lib:         /home/cunha/.config/urxvt-perl
 
-urxvt.font:             xft:Source Code Pro:style=regular:size=12
+urxvt.font:             xft:Source Code Pro:style=regular:size=14
 ! urxvt.font:             xft:M+ 1mn:style=regular:size=10
 ! urxvt.font:             xft:Fira Code:style=light:size=12
 ! urxvt.font:             xft:Iosevka:style=light:size=12
