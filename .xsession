@@ -38,7 +38,7 @@ export ELECTRON_TRASH=trash-cli
 # xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
 
 setxkbmap -layout us -option ctrl:swapcaps
-xcape -e "Control_L=Escape"
+xcape -t 250 -e "Control_L=Escape"
 xrdb ~/.Xresources
 xrdb -merge ~/.config/solarized-dark.Xresources
 xset -b
