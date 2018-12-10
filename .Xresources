@@ -26,15 +26,10 @@ UXTerm*colorULMode:     false
 UXTerm*italicULMode:    false
 UXTerm*translations:    #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)\n Shift <KeyPress> Insert: insert-selection(CLIPBOARD)\n Super <Btn3Down>: insert-selection(CLIPBOARD)
 
-urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,font-size,osc52
-urxvt.perl-lib:         /home/cunha/.config/urxvt-perl
-
-urxvt.font:             xft:Source Code Pro:style=regular:size=14
+urxvt.font:             xft:Source Code Pro:style=medium:size=14
 ! urxvt.font:             xft:M+ 1mn:style=regular:size=10
 ! urxvt.font:             xft:Fira Code:style=light:size=12
 ! urxvt.font:             xft:Iosevka:style=light:size=12
-urxvt.keysym.M-S-F11:   font-size:decrease
-urxvt.keysym.M-S-F12:   font-size:increase
 
 urxvt.depth:            32
 urxvt.intensityStyles:  false
@@ -46,16 +41,23 @@ urxvt.cursorBlink:      on
 urxvt.cursorOnTime:     100
 urxvt.cursorOffTime:    100
 urxvt.urgentOnBell:     true
-urxvt.secondaryScreen:  1
-urxvt.secondaryScroll:  0
 urxvt.jumpScroll:       true
 urxvt.skipScroll:       true
+urxvt.secondaryScreen:  1
+urxvt.secondaryScroll:  0
+urxvt.secondaryWheel:   1
 
-urxvt.matcher.button:   1
+urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,font-size,osc52
+urxvt.perl-lib:         /home/cunha/.config/urxvt-perl
+
+urxvt.keysym.M-S-F11:   font-size:decrease
+urxvt.keysym.M-S-F12:   font-size:increase
+
 urxvt.url-launcher:     /usr/bin/xdg-open
 urxvt.matcher.rend.0:   Uline fg6
+urxvt.matcher.button:   1
 
-URxvt.clipboard.autocopy: true
+urxvt.clipboard.autocopy: true
 urxvt.clipboard.copycmd:  xclip -i -selection clipboard
 urxvt.clipboard.pastecmd: xclip -o -selection clipboard
 urxvt.keysym.S-Insert:    eval:paste_clipboard
@@ -71,4 +73,5 @@ urxvt.keysym.S-Insert:    eval:paste_clipboard
 ! solarized
 urxvt.keysym.M-S-F9:    command:\033]10;#657b83\007\033]11;#fdf6e3\007\033]708;#fdf6e3\007\033]12;#586e75\007\033]13;#586e75\007\033]4;0;#073642\007\033]4;1;#dc322f\007\033]4;2;#00ad40\007\033]4;3;#b68000\007\033]4;4;#268bd2\007\033]4;5;#d33682\007\033]4;6;#2aa198\007\033]4;7;#eee8d5\007\033]4;8;#002b36\007\033]4;9;#cb4b16\007\033]4;10;#586e75\007\033]4;11;#657b83\007\033]4;12;#839496\007\033]4;13;#6c71c4\007\033]4;14;#93a1a1\007\033]4;15;#fdf6e3\007
 urxvt.keysym.M-S-F10:   command:\033]10;#839496\007\033]11;#002b36\007\033]708;#002b36\007\033]12;#93a1a1\007\033]13;#93a1a1\007\033]4;7;#073642\007\033]4;1;#dc322f\007\033]4;2;#00ad40\007\033]4;3;#b68000\007\033]4;4;#268bd2\007\033]4;5;#d33682\007\033]4;6;#2aa198\007\033]4;0;#eee8d5\007\033]4;15;#002b36\007\033]4;9;#cb4b16\007\033]4;14;#586e75\007\033]4;12;#657b83\007\033]4;11;#839496\007\033]4;13;#6c71c4\007\033]4;10;#93a1a1\007\033]4;8;#fdf6e3\007
+
 #include "/home/cunha/.config/solarized-dark.Xresources"

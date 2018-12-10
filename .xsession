@@ -8,6 +8,13 @@ if xrandr --query | grep -Ee "^DP-1[^ ]* connected" > /dev/null ; then
 	sleep 1s
 	xrandr --dpi 96
 	export GDK_DPI_SCALE=1
+elif xrandr --query | grep -Ee "^HDMI-1[^ ]* connected" > /dev/null ; then
+	xrandr --output eDP-1 --off
+	sleep 1s
+	xrandr --output HDMI-1 --auto
+	sleep 1s
+	xrandr --dpi 96
+	export GDK_DPI_SCALE=1
 else
 	xrandr --dpi 144
 	export GDK_DPI_SCALE=1.5
