@@ -53,13 +53,15 @@ bindsym $mod+equal exec xtrlock -b
 # bindsym XF86AudioMute exec "amixer sset Master,0 toggle"
 # bindsym XF86AudioRaiseVolume exec "amixer sset Master,0 5+"
 # bindsym XF86AudioLowerVolume exec "amixer sset Master,0 5-"
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +3%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -3%
+bindsym XF86AudioMute exec --no-startup-id /home/cunha/bin/pa-all-sinks.sh set-sink-mute toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id /home/cunha/bin/pa-all-sinks.sh set-sink-volume +3%
+bindsym XF86AudioLowerVolume exec --no-startup-id /home/cunha/bin/pa-all-sinks.sh set-sink-volume -3%
 
 bindsym XF86MonBrightnessUp exec /home/cunha/bin/bright up
 bindsym XF86MonBrightnessDown exec /home/cunha/bin/bright down
+
+bindsym $mod+o exec --no-startup-id /home/cunha/bin/edit-in-vim.sh
 
 bindsym $mod+F4 kill
 bindsym $mod+d exec dmenu_run
