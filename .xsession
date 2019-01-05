@@ -13,12 +13,12 @@ elif xrandr --query | grep -Ee "^DP-2[^ ]* connected" > /dev/null ; then
 	xrandr --output DP-2 --above eDP-1 --dpi 144 --auto
 	export GDK_DPI_SCALE=1.5
 elif xrandr --query | grep -Ee "^HDMI-1[^ ]* connected" > /dev/null ; then
-	xrandr --output eDP-1 --off
+	xrandr --output eDP-1 --auto
 	sleep 1s
-	xrandr --output HDMI-1 --auto
+	xrandr --output HDMI-1 --above eDP-1 --auto
 	sleep 1s
 	xrandr --dpi 96
-	export GDK_DPI_SCALE=1
+	export GDK_DPI_SCALE=1.5
 else
 	xrandr --dpi 144
 	export GDK_DPI_SCALE=1.5
@@ -49,7 +49,7 @@ export ELECTRON_TRASH=trash-cli
 # xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
 
 setxkbmap -layout us -option ctrl:swapcaps
-xcape -t 250 -e "Control_L=Escape"
+# xcape -t 250 -e "Control_L=Escape"
 xrdb ~/.Xresources
 xrdb -merge ~/.config/solarized-dark.Xresources
 xset -b
