@@ -63,6 +63,8 @@ urxvt.clipboard.pastecmd: xclip -o -selection clipboard
 urxvt.keysym.S-Insert:    eval:paste_clipboard
 ! urxvt.keysym.C-BackSpace: \033[33~ ! ([33~ is F19)
 
+urxvt.keysym.M-BackSpace: \033[33~
+
 !!! generating tmux navigation command
 ! urxvt.keysym.Mod4-h: \033[21~h
 ! urxvt.keysym.Mod4-j: \033[21~j
