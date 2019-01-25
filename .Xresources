@@ -26,7 +26,7 @@ UXTerm*colorULMode:     false
 UXTerm*italicULMode:    false
 UXTerm*translations:    #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)\n Shift <KeyPress> Insert: insert-selection(CLIPBOARD)\n Super <Btn3Down>: insert-selection(CLIPBOARD)
 
-urxvt.font:             xft:Source Code Pro:style=medium:size=12
+urxvt.font:             xft:Source Code Pro:style=medium:size=11
 ! urxvt.font:             xft:M+ 1mn:style=regular:size=10
 ! urxvt.font:             xft:Fira Code:style=light:size=12
 ! urxvt.font:             xft:Iosevka:style=light:size=12
