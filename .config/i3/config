@@ -42,6 +42,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+w exec --no-startup-id exec /usr/bin/urxvt
+bindsym $mod+q exec --no-startup-id exec /usr/bin/urxvt -fn "xft:Source Code Pro:style=regular:size=15"
+
 bindsym $mod+slash exec /home/cunha/bin/delay-monitor-off.sh
 bindsym $mod+BackSpace exec /home/cunha/bin/swapintl.sh
 bindsym $mod+equal exec xtrlock -b
