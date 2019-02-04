@@ -5,31 +5,8 @@ Xft.hinting:    1
 Xft.antialias:  1
 Xft.rgba:       rgb
 
-*VT100*utf8:            1
-*VT100*eightBitInput:   false
-*VT100*eightBitControl: false
-*VT100*eightBitOutput:  true
-XTerm*faceName:         Neep
-XTerm*faceSize:         14
-UXTerm*faceName:        Source Code Pro Semibold
-UXTerm*faceSize:        14
-! UXTerm*scaleHeight:   1.25
-UXTerm*scrollBar:       false
-UXTerm*visualBell:      true
-UXTerm*saveLines:       10000
-UXTerm*fastScroll:      true
-UXTerm*cursorBlink:     on
-UXTerm*cursorOnTime:    250
-UXTerm*cursorOffTime:   250
-UXTerm*colorBDMode:     false
-UXTerm*colorULMode:     false
-UXTerm*italicULMode:    false
-UXTerm*translations:    #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)\n Shift <KeyPress> Insert: insert-selection(CLIPBOARD)\n Super <Btn3Down>: insert-selection(CLIPBOARD)
-
-urxvt.font:             xft:Source Code Pro:style=medium:size=11
-! urxvt.font:             xft:M+ 1mn:style=regular:size=10
+urxvt.font:             xft:Source Code Pro:style=medium:size=16
 ! urxvt.font:             xft:Fira Code:style=light:size=12
-! urxvt.font:             xft:Iosevka:style=light:size=12
 
 urxvt.depth:            32
 urxvt.intensityStyles:  false
@@ -46,6 +23,8 @@ urxvt.skipScroll:       true
 urxvt.secondaryScreen:  1
 urxvt.secondaryScroll:  0
 urxvt.secondaryWheel:   1
+urxvt.scrollTtyOutput: false
+urxvt.scrollTtyKeypress: true
 
 urxvt.perl-ext-common:  default,eval,matcher,selection-to-clipboard,font-size,osc52
 urxvt.perl-lib:         /home/cunha/.config/urxvt-perl
@@ -72,8 +51,59 @@ urxvt.keysym.M-BackSpace: \033[33~
 ! urxvt.keysym.Mod4-l: \033[21~l
 
 !!! colors
-! solarized
-urxvt.keysym.M-S-F9:    command:\033]10;#657b83\007\033]11;#fdf6e3\007\033]708;#fdf6e3\007\033]12;#586e75\007\033]13;#586e75\007\033]4;0;#073642\007\033]4;1;#dc322f\007\033]4;2;#00ad40\007\033]4;3;#b68000\007\033]4;4;#268bd2\007\033]4;5;#d33682\007\033]4;6;#2aa198\007\033]4;7;#eee8d5\007\033]4;8;#002b36\007\033]4;9;#cb4b16\007\033]4;10;#586e75\007\033]4;11;#657b83\007\033]4;12;#839496\007\033]4;13;#6c71c4\007\033]4;14;#93a1a1\007\033]4;15;#fdf6e3\007
-urxvt.keysym.M-S-F10:   command:\033]10;#839496\007\033]11;#002b36\007\033]708;#002b36\007\033]12;#93a1a1\007\033]13;#93a1a1\007\033]4;7;#073642\007\033]4;1;#dc322f\007\033]4;2;#00ad40\007\033]4;3;#b68000\007\033]4;4;#268bd2\007\033]4;5;#d33682\007\033]4;6;#2aa198\007\033]4;0;#eee8d5\007\033]4;15;#002b36\007\033]4;9;#cb4b16\007\033]4;14;#586e75\007\033]4;12;#657b83\007\033]4;11;#839496\007\033]4;13;#6c71c4\007\033]4;10;#93a1a1\007\033]4;8;#fdf6e3\007
+urxvt.keysym.M-S-F9: command:\033]10;#657b83\007\033]11;#fdf6e3\007\033]708;#fdf6e3\007\033]12;#586e75\007\033]13;#586e75\007\033]4;0;#073642\007\033]4;1;#dc322f\007\033]4;2;#00ad40\007\033]4;3;#b68000\007\033]4;4;#268bd2\007\033]4;5;#d33682\007\033]4;6;#2aa198\007\033]4;7;#eee8d5\007\033]4;8;#002b36\007\033]4;9;#cb4b16\007\033]4;10;#586e75\007\033]4;11;#657b83\007\033]4;12;#839496\007\033]4;13;#6c71c4\007\033]4;14;#93a1a1\007\033]4;15;#fdf6e3\007
+urxvt.keysym.M-S-F10: command:\033]10;#839496\007\033]11;#002b36\007\033]708;#002b36\007\033]12;#93a1a1\007\033]13;#93a1a1\007\033]4;7;#073642\007\033]4;1;#dc322f\007\033]4;2;#00ad40\007\033]4;3;#b68000\007\033]4;4;#268bd2\007\033]4;5;#d33682\007\033]4;6;#2aa198\007\033]4;0;#eee8d5\007\033]4;15;#002b36\007\033]4;9;#cb4b16\007\033]4;14;#586e75\007\033]4;12;#657b83\007\033]4;11;#839496\007\033]4;13;#6c71c4\007\033]4;10;#93a1a1\007\033]4;8;#fdf6e3\007
+
+! XTerm resources:
+! https://www.in-ulm.de/~mascheck/X11/XTerm
+! https://lukas.zapletalovi.com/2013/07/hidden-gems-of-xterm.html
+XTerm*customization: -color
+XTerm.termName: xterm-256color
+
+XTerm*locale:          true
+XTerm*metaSendsEscape: true
+XTerm*utf8:            1
+XTerm*eightBitInput:   false
+XTerm*eightBitControl: false
+XTerm*eightBitOutput:  true
+XTerm*dynamicColors: true
+
+! Font
+XTerm*faceName:     Source Code Pro:style=medium:size=10
+XTerm*faceSize1:    8
+XTerm*faceSize2:    10
+XTerm*faceSize3:    12
+XTerm*faceSize4:    14
+XTerm*faceSize5:    16
+XTerm*faceSize6:    18
+XTerm*colorBDMode:  false
+XTerm*colorULMode:  false
+XTerm*italicULMode: false
+! UXTerm*scaleHeight:   1.25
+
+! Buffer
+XTerm*fastScroll:      true
+XTerm*saveLines:       10000
+XTerm*scrollBar:       false
+xterm*scrollTtyOutput: false
+
+XTerm*visualBell:      false
+
+XTerm*cursorBlink:     on
+XTerm*cursorOnTime:    250
+XTerm*cursorOffTime:   250
+
+! Clipboard and selection
+XTerm*highlightSelection: true
+XTerm*on3Clicks:          regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+XTerm*on4Clicks:          regex [^[:blank:]]*
+XTerm*selectToClipboard:  true
+
+XTerm*trimSelection:      true
+
+XTerm*translations:       #override \
+Shift <KeyPress> Insert: insert-selection(CLIPBOARD)\n\
+Meta Shift <Key> F11: smaller-vt-font()\n\
+Meta Shift <Key> F12: larger-vt-font()\n
 
 #include "/home/cunha/.config/solarized-dark.Xresources"
