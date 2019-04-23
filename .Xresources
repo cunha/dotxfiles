@@ -5,7 +5,8 @@ Xft.hinting:    1
 Xft.antialias:  1
 Xft.rgba:       rgb
 
-urxvt.font:             xft:Source Code Pro:style=medium:size=16
+! x1 laptop screen 2 vim columns requires Source Code Pro 11
+urxvt.font:             xft:Source Code Pro:style=medium:size=11
 ! urxvt.font:             xft:Fira Code:style=light:size=12
 
 urxvt.depth:            32

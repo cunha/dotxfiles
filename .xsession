@@ -1,13 +1,8 @@
 # configuring screens before firing X:
-if xrandr --query | grep -Ee "^DP-1[^ ]* connected" > /dev/null ; then
-	xrandr --output eDP-1 --off
-	sleep 1s
-	xrandr --output DP-1-1 --pos 0x0 --rotate left --auto
-	sleep 1s
-	xrandr --output DP-1-3 --pos 1080x300 --auto
-	sleep 1s
-	xrandr --dpi 96
-	export GDK_DPI_SCALE=1
+if xrandr --query | grep -Ee "^DP-1-2[^ ]* connected" > /dev/null ; then
+	xrandr --output eDP-1 --dpi 144 auto
+	xrandr --output DP-1-2 --above eDP-1 --dpi 144 --auto
+	export GDK_DPI_SCALE=1.5
 elif xrandr --query | grep -Ee "^DP-2[^ ]* connected" > /dev/null ; then
 	xrandr --output eDP-1 --dpi 144 auto
 	xrandr --output DP-2 --above eDP-1 --dpi 144 --auto
@@ -30,6 +25,7 @@ fi
 # exec openbox-session
 
 export TZ='America/New_York'
+# export TZ='America/Los_Angeles'
 # export TZ='America/Sao_Paulo'
 # export TZ='Europe/Berlin'
 # export TZ='Australia/Sydney'

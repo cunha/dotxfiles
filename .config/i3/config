@@ -82,10 +82,10 @@ bindsym $mod+right focus right
 # bindsym $mod+Shift+j move down
 # bindsym $mod+Shift+k move up
 # bindsym $mod+Shift+l move right
-bindsym $mod+Shift+h move container to output left
-bindsym $mod+Shift+j move container to output down
-bindsym $mod+Shift+k move container to output up
-bindsym $mod+Shift+l move container to output right
+bindsym $mod+Shift+h move workspace to output left
+bindsym $mod+Shift+j move workspace to output down
+bindsym $mod+Shift+k move workspace to output up
+bindsym $mod+Shift+l move workspace to output right
 
 bindsym $mod+semicolon split toggle
 
