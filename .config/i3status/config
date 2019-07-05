@@ -11,6 +11,7 @@ order += "wireless wlp2s0"
 order += "battery 0"
 order += "cpu_usage"
 order += "cpu_temperature 0"
+order += "path_exists keyboard"
 order += "tztime local"
 order += "run_watch Docker"
 
@@ -58,6 +59,14 @@ battery 0 {
 	threshold_type = "percentage"
 	integer_battery_capacity = true
 	separator_block_width = 20
+}
+
+path_exists keyboard {
+	path = "/home/cunha/.cache/us-intl"
+	format = " br"
+	format_down = " us"
+	color_good = "#FFFFFF"
+	color_bad = "#FFFFFF"
 }
 
 tztime local {

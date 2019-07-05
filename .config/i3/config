@@ -44,6 +44,19 @@ floating_modifier $mod
 bindsym $mod+w exec --no-startup-id exec /usr/bin/urxvt
 bindsym $mod+q exec --no-startup-id exec /usr/bin/urxvt -fn "xft:Source Code Pro:style=regular:size=15"
 
+
+bindsym $mod+o exec --no-startup-id /home/cunha/bin/edit-in-vim.sh
+
+# exit i3 (logs you out of your X session)
+
+bindsym $mod+F1 exec --no-startup-id urxvt -e pamix
+bindsym $mod+F10 exec --no-startup-id blueman-manager
+bindsym $mod+F11 exec --no-startup-id /home/cunha/bin/swapintl.sh
+
+bindsym $mod+F12 reload
+bindsym $mod+Shift+F12 restart  # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
 bindsym $mod+slash exec /home/cunha/bin/delay-monitor-off.sh
 bindsym $mod+BackSpace exec /home/cunha/bin/swapintl.sh
 bindsym $mod+equal exec xtrlock -b
@@ -62,8 +75,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id /home/cunha/bin/pa-all-sinks.s
 
 bindsym XF86MonBrightnessUp exec /home/cunha/bin/bright up
 bindsym XF86MonBrightnessDown exec /home/cunha/bin/bright down
-
-bindsym $mod+o exec --no-startup-id /home/cunha/bin/edit-in-vim.sh
 
 bindsym $mod+F4 kill
 bindsym $mod+d exec dmenu_run
@@ -112,7 +123,7 @@ bindsym $mod+a focus parent
 bindsym $mod+0 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 0; exec --no-startup-id chromium --enable-remote-extensions\\""
 bindsym $mod+1 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Firefox-esr\\" \\"workspace 1; exec --no-startup-id firefox-esr\\""
 bindsym $mod+2 workspace 2
-bindsym $mod+grave exec "python /home/cunha/.config/i3/run-or-focus.py \\"Code\\" \\"workspace 2; exec --no-startup-id code\\""
+bindsym $mod+tap exec "python /home/cunha/.config/i3/run-or-focus.py \\"Code\\" \\"workspace 9; exec --no-startup-id code\\""
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
@@ -132,13 +143,6 @@ bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
-
-# reload the configuration file
-bindsym $mod+F11 reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+F11 restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+F12 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
@@ -191,7 +195,7 @@ bar {
 
 exec --no-startup-id i3-msg 'exec exec /usr/bin/blueman-applet'
 exec --no-startup-id i3-msg 'exec exec /usr/bin/nm-applet'
-exec --no-startup-id i3-msg 'exec exec /usr/bin/owncloud --logfile /home/cunha/.cache/owncloud.log'
+# exec --no-startup-id i3-msg 'exec exec /usr/bin/owncloud --logfile /home/cunha/.cache/owncloud.log'
 exec --no-startup-id i3-msg 'exec exec /usr/bin/insync start'
 exec --no-startup-id i3-msg 'exec /home/cunha/bin/dropbox.py start'
 
@@ -200,7 +204,7 @@ exec --no-startup-id i3-msg 'exec /home/cunha/bin/dropbox.py start'
 
 # assign [class="com-trollworks-gcs-app-GCS"] 7
 assign [class="VirtualBox"] 7
-assign [class="Code"] 2
+assign [class="Code"] 9
 # assign [class="Spotify"] 8
 # for_window [class="VirtualBox"] floating enable
 # for_window [class="Steam"] floating enable

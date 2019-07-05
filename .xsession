@@ -44,7 +44,7 @@ export ELECTRON_TRASH=trash-cli
 # xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
 # xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
 
-setxkbmap -layout us -option ctrl:swapcaps
+setxkbmap -layout us -option ctrl:nocaps
 # xcape -t 200 -e "Control_L=Escape"
 # xcape -t 200 -e "Control_L=Escape"
 xcape -t 200 -e "Control_R=Escape"

@@ -59,8 +59,8 @@ def main():
             return
     # No focused match was found, so focus the first one
     if len(matches) > 0:
-            subprocess.call(["i3-msg", "[id=%s] focus" % matches[0]['window']])
-            return
+        subprocess.call(["i3-msg", "[id=%s] focus" % matches[0]['window']])
+        return
     # No matches found, launch program
     subprocess.call(["i3-msg", sys.argv[2]])
 
