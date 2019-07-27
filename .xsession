@@ -36,8 +36,11 @@ export GTK_IM_MODULE=xim
 export XMODIFIERS="@im=none"
 export MOZ_USE_OMTC=1
 # export CHROMIUM_FLAGS="--enable-remote-extensions"
-# export $(/usr/bin/gnome-keyring-daemon --start --components=ssh,secrets)
 export ELECTRON_TRASH=trash-cli
+export XDG_CONFIG_HOME=/home/cunha/.config/
+
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,ssh,secrets)
+export SSH_AUTH_SOCK
 
 # thinkpad mouse wheel
 # xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1

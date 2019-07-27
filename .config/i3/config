@@ -120,10 +120,10 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+0 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 0; exec --no-startup-id chromium --enable-remote-extensions\\""
-bindsym $mod+1 exec "python /home/cunha/.config/i3/run-or-focus.py \\"Firefox-esr\\" \\"workspace 1; exec --no-startup-id firefox-esr\\""
+bindsym $mod+0 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 0; exec --no-startup-id chromium --enable-remote-extensions\\""
+bindsym $mod+1 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Firefox-esr\\" \\"workspace 1; exec --no-startup-id firefox-esr\\""
 bindsym $mod+2 workspace 2
-bindsym $mod+tap exec "python /home/cunha/.config/i3/run-or-focus.py \\"Code\\" \\"workspace 9; exec --no-startup-id code\\""
+bindsym $mod+tap exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Code\\" \\"exec --no-startup-id code\\""
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
@@ -204,7 +204,7 @@ exec --no-startup-id i3-msg 'exec /home/cunha/bin/dropbox.py start'
 
 # assign [class="com-trollworks-gcs-app-GCS"] 7
 assign [class="VirtualBox"] 7
-assign [class="Code"] 9
+# assign [class="Code"] 9
 # assign [class="Spotify"] 8
 # for_window [class="VirtualBox"] floating enable
 # for_window [class="Steam"] floating enable
