@@ -59,7 +59,7 @@ bindsym $mod+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut
 
 bindsym $mod+slash exec /home/cunha/bin/delay-monitor-off.sh
 bindsym $mod+BackSpace exec /home/cunha/bin/swapintl.sh
-bindsym $mod+equal exec xtrlock -b
+bindsym --release $mod+equal exec slock
 
 # bindsym XF86AudioPlay exec "mocp --play"
 # bindsym XF86AudioStop exec "mocp --stop"
