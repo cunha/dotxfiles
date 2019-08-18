@@ -1,0 +1,31 @@
+dir
+vim kitty.conf
+ls
+kitty @ set-colors --all light.conf
+vim light.conf
+kitty @ set-colors --all light.conf
+vim kitty.conf
+ls
+kitty @ set-colors --all light.conf
+
+
+kitty @ set-colors --all dark.conf
+kitty @ set-colors --all light.conf
+dir
+vimdiff dark.conf light.conf
+kitty @ set-colors --all light.conf
+kitty @ set-colors --all dark.conf
+vim light.conf
+kitty @ set-colors --all light.conf
+vim
+vim kitty.conf
+dir
+vim kitty.conf
+code -r kitty.conf
+dir
+cd
+cd
+code -r kitty.conf
+cd ../
+ls
+vcsh dotxfiles add .
