@@ -13,7 +13,7 @@ xkb_symbols "basic" {
     key <AE07> {	[	  7,	ampersand	]	};
     key <AE08> {	[	  8,	asterisk	]	};
     key <AE09> {	[	  9,	parenleft	]	};
-    key <AE10> {	[	  0,	parenright, osfBeginLine, osfBeginLine	]	};
+    key <AE10> {	[	  0,	parenright, Home, Home	]	};
     key <AE11> {	[     minus,	underscore	]	};
     key <AE12> {	[     equal,	plus		]	};
 
@@ -24,9 +24,9 @@ xkb_symbols "basic" {
     key <AD05> {	[	  t,	T		]	};
     key <AD06> {	[	  y,	Y		]	};
     key <AD07> {	[	  u,	U		]	};
-    key <AD08> {	[	  i,	I, osfPageUp, osfPageUp		]	};
-    key <AD09> {	[	  o,	O, osfPageDown, osfPageDown		]	};
-    key <AD10> {	[	  p,	P, osfEndLine, osfEndLine		]	};
+    key <AD08> {	[	  i,	I, Prior, Prior		]	};
+    key <AD09> {	[	  o,	O, Next, Next		]	};
+    key <AD10> {	[	  p,	P, End, End		]	};
     key <AD11> {	[ bracketleft,	braceleft	]	};
     key <AD12> {	[ bracketright,	braceright	]	};
 
@@ -35,11 +35,11 @@ xkb_symbols "basic" {
     key <AC03> {	[	  d,	D		]	};
     key <AC04> {	[	  f,	F		]	};
     key <AC05> {	[	  g,	G		]	};
-    key <AC06> {	[	  h,	H, osfLeft, osfLeft		]	};
-    key <AC07> {	[	  j,	J, osfDown, osfDown		]	};
-    key <AC08> {	[	  k,	K, osfUp, osfUp		]	};
-    key <AC09> {	[	  l,	L, osfRight, osfRight		]	};
-    key <AC10> {	[ semicolon,	colon, osfDelete, osfDelete		]	};
+    key <AC06> {	[	  h,	H, Left, Left		]	};
+    key <AC07> {	[	  j,	J, Down, Down		]	};
+    key <AC08> {	[	  k,	K, Up, Up		]	};
+    key <AC09> {	[	  l,	L, Right, Right		]	};
+    key <AC10> {	[ semicolon,	colon, Delete, Delete		]	};
     key <AC11> {	[ apostrophe,	quotedbl	]	};
 
     key <AB01> {	[	  z,	Z 		]	};
@@ -63,8 +63,7 @@ xkb_symbols "basic" {
     key <LALT> { type[Group1] = "ONE_LEVEL", symbols[Group1] = [ ISO_Level3_Shift] };
     // need the Group1 things above to prevent RALT from generating Mod1
     replace key <LVL3> { [ ISO_Level3_Shift ] };
-    // modifier_map Mod5 { <RCTL> };
-    // modifier_map Mod5 { <LVL3> };
+    modifier_map Mod5 { <LVL3> };
 };
 
 partial alphanumeric_keys

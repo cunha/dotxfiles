@@ -39,7 +39,7 @@ export ELECTRON_TRASH=trash-cli
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,ssh,secrets)
 export SSH_AUTH_SOCK
 
-setxkbmap -layout us -option ctrl:nocaps
+setxkbmap -layout uscunha -option shift:both_capslock
 # xcape -t 200 -e "Control_L=Escape"
 # xcape -t 200 -e "Control_R=Escape"
 
