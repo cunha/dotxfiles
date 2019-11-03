@@ -17,8 +17,9 @@ font pango: Roboto, Font Awesome 5 Free, Font Awesome 5 Brands
 
 floating_modifier $mod
 
-bindsym $mod+w exec --no-startup-id exec kitty
-bindsym $mod+q exec --no-startup-id exec kitty -o font_size=13
+bindsym $mod+q exec --no-startup-id exec kitty
+# bindsym $mod+w exec --no-startup-id exec urxvt
+# bindsym $mod+q exec --no-startup-id exec urxvt -fn "xft:Source Code Pro:style=medium:size=13"
 # bindsym $mod+o exec --no-startup-id /home/cunha/bin/edit-in-vim.sh
 
 bindsym $mod+F1 exec --no-startup-id kitty pamix
@@ -102,7 +103,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+0 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 0; exec --no-startup-id chromium --enable-remote-extensions\\""
+# bindsym $mod+0 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 0; exec --no-startup-id chromium --enable-remote-extensions\\""
 bindsym $mod+1 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Firefox-esr\\" \\"workspace 1; exec --no-startup-id firefox-esr\\""
 bindsym $mod+2 workspace 2
 bindsym $mod+tap exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Code\\" \\"exec --no-startup-id code\\""
