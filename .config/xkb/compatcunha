@@ -34,7 +34,7 @@ default partial xkb_compatibility "compatcunha" {
 
   interpret osfBeginLine {
     repeat= True;
-    action = RedirectKey(keycode=<LEFT>, clearmodifiers=Mod5);
+    action = RedirectKey(keycode=<HOME>, clearmodifiers=Mod5);
   };
 
   interpret osfEndLine {
