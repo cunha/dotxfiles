@@ -1,9 +1,6 @@
 #!/bin/sh
 set -eux
-
-xrandr --output DP-1 --pos 0x0 --auto
-xrandr --output eDP-1 --pos 320x2160 --auto
-sleep 2s
-xrandr --dpi 192
+# 3840x2160
+# 2560x1440
+xrandr --dpi 144 --output eDP-1 --pos 640x2160 --auto --output DP-2 --pos 0x0 --auto
 i3-msg restart
-# pkill -HUP fluxbox

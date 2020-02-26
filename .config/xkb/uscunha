@@ -17,7 +17,7 @@ xkb_symbols "basic" {
     key <AE11> {	[     minus,	underscore	]	};
     key <AE12> {	[     equal,	plus		]	};
 
-    key <AD01> {	[	  q,	Q 		]	};
+    key <AD01> {	[	  q,	Q, osfDelete, osfDelete 		]	};
     key <AD02> {	[	  w,	W		]	};
     key <AD03> {	[	  e,	E		]	};
     key <AD04> {	[	  r,	R		]	};

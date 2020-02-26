@@ -4,24 +4,23 @@ if xrandr --query | grep -Ee "^DP-1-2[^ ]* connected" > /dev/null ; then
 	xrandr --output DP-1-2 --above eDP-1 --dpi 144 --auto
 	export GDK_DPI_SCALE=1.5
 elif xrandr --query | grep -Ee "^DP-2[^ ]* connected" > /dev/null ; then
-	xrandr --output eDP-1 --dpi 144 auto
-	xrandr --output DP-2 --above eDP-1 --dpi 144 --auto
+xrandr --dpi 144 --output eDP-1 --pos 640x2160 --auto --output DP-2 --pos 0x0 --auto
 	export GDK_DPI_SCALE=1.5
-elif xrandr --query | grep -Ee "^HDMI-1[^ ]* connected" > /dev/null ; then
-	xrandr --output eDP-1 --auto
-	sleep 1s
-	xrandr --output HDMI-1 --above eDP-1 --auto
-	sleep 1s
-	xrandr --dpi 96
-	export GDK_DPI_SCALE=1.5
+# elif xrandr --query | grep -Ee "^HDMI-1[^ ]* connected" > /dev/null ; then
+# 	xrandr --output eDP-1 --auto
+# 	sleep 1s
+# 	xrandr --output HDMI-1 --above eDP-1 --auto
+# 	sleep 1s
+# 	xrandr --dpi 96
+# 	export GDK_DPI_SCALE=1.5
 else
 	xrandr --dpi 144
 	export GDK_DPI_SCALE=1.5
 fi
 
-export TZ='America/New_York'
+# export TZ='America/New_York'
 # export TZ='America/Los_Angeles'
-# export TZ='America/Sao_Paulo'
+export TZ='America/Sao_Paulo'
 # export TZ='Europe/Berlin'
 # export TZ='Australia/Sydney'
 # export TZ='Asia/Singapore'
@@ -39,7 +38,7 @@ export ELECTRON_TRASH=trash-cli
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,ssh,secrets)
 export SSH_AUTH_SOCK
 
-setxkbmap -layout uscunha -option shift:both_capslock
+setxkbmap -layout us -option shift:both_capslock -option ctrl:nocaps
 # xcape -t 200 -e "Control_L=Escape"
 # xcape -t 200 -e "Control_R=Escape"
 
