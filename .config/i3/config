@@ -22,7 +22,8 @@ bindsym $mod+q exec --no-startup-id exec kitty
 # bindsym $mod+q exec --no-startup-id exec urxvt -fn "xft:Source Code Pro:style=medium:size=13"
 # bindsym $mod+o exec --no-startup-id /home/cunha/bin/edit-in-vim.sh
 
-bindsym $mod+F1 exec --no-startup-id kitty pamix
+# bindsym $mod+F1 exec --no-startup-id kitty pamix
+bindsym $mod+F1 exec --no-startup-id pavucontrol
 bindsym $mod+F10 exec --no-startup-id blueman-manager
 bindsym $mod+F11 exec --no-startup-id /home/cunha/bin/swapintl.sh
 
