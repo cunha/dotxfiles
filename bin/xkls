@@ -11,7 +11,11 @@ case "$1" in
 	xrandr --output LVDS-1 --mode 1360x768 --auto
 	;;
 1024|*)
-	xrandr --output DP-1 --mode 1024x768 --auto
+	xrandr --output HDMI-1 --mode 1024x768 --auto
 	xrandr --output eDP-1 --mode 1024x768 --auto
+	;;
+1920|*)
+	xrandr --output HDMI-1 --mode 1920x1080 --auto
+	xrandr --output eDP-1 --mode 1920x1080 --auto
 	;;
 esac
