@@ -69,6 +69,8 @@ UXTerm*eightBitControl: false
 UXTerm*eightBitOutput:  true
 UXTerm*dynamicColors: true
 
+UXTerm*allowWindowOps: true
+
 ! Font
 UXTerm*faceName:     Source Code Pro
 UXTerm*faceSize:     12
