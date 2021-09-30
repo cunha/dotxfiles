@@ -37,10 +37,21 @@ mode "exit: [r]eload, re[s]tart, e[x]it, reboo[t], shutdow[n]" {
   bindsym Return mode "default"
 }
 
+mode "window: [1] discord, [2] slack" {
+  bindsym 1 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Discord\\" \\"workspace 11; exec --no-startup-id discord\\""; mode "default"
+  bindsym 2 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Slack\\" \\"workspace 12; exec --no-startup-id slack\\""; mode "default"
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+}
+
 bindsym $mod+Escape mode "exit: [r]eload, re[s]tart, e[x]it, reboo[t], shutdow[n]"
+
+bindsym $mod+dead_grave mode "window: [1] discord, [2] slack"
+bindsym $mod+grave mode "window: [1] discord, [2] slack"
 
 bindsym $mod+slash exec /home/cunha/bin/delay-monitor-off.sh
 bindsym $mod+BackSpace exec /home/cunha/bin/swapintl.sh
+bindsym $mod+Shift+BackSpace exec /home/cunha/bin/xkb-swap.sh
 bindsym --release $mod+equal exec slock
 
 # bindsym XF86AudioPlay exec "mocp --play"
@@ -104,7 +115,9 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-# bindsym $mod+0 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 0; exec --no-startup-id chromium --enable-remote-extensions\\""
+bindsym $mod+0 workspace 0
+# bindsym $mod+0 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 1; exec --no-startup-id chromium --enable-remote-extensions\\""
+# bindsym $mod+1 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Chromium\\" \\"workspace 1; exec --no-startup-id chromium --enable-remote-extensions\\""
 bindsym $mod+1 exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Firefox-esr\\" \\"workspace 1; exec --no-startup-id firefox-esr\\""
 bindsym $mod+2 workspace 2
 bindsym $mod+tap exec "python3 /home/cunha/.config/i3/run-or-focus.py \\"Code\\" \\"exec --no-startup-id code\\""
@@ -171,12 +184,12 @@ bar {
 
 # Startup applications
 # exec --no-startup-id i3-msg 'exec exec /usr/bin/gnome-settings-daemon'
-# exec --no-startup-id i3-msg 'exec exec /usr/bin/pasystray'
+exec --no-startup-id i3-msg 'exec exec /usr/bin/pasystray'
 
 exec --no-startup-id i3-msg 'exec exec /usr/bin/udiskie --tray'
 exec --no-startup-id i3-msg 'exec exec /usr/bin/blueman-applet'
 exec --no-startup-id i3-msg 'exec exec /usr/bin/nm-applet'
-exec --no-startup-id i3-msg 'exec exec /usr/bin/insync start'
+# exec --no-startup-id i3-msg 'exec exec /usr/bin/insync start'
 
 exec --no-startup-id i3-msg 'exec exec /usr/bin/redshift -c /home/cunha/.config/redshift.conf'
 exec --no-startup-id i3-msg 'exec exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1'

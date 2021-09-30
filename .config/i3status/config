@@ -11,7 +11,9 @@ order += "wireless wlp2s0"
 order += "battery 0"
 order += "cpu_usage"
 order += "cpu_temperature 0"
-order += "path_exists keyboard"
+# order += "path_exists keyboard"
+# order += "path_exists keyboardext"
+order += "read_file keyboardfile"
 order += "tztime local"
 order += "run_watch Docker"
 
@@ -42,7 +44,7 @@ cpu_temperature 0 {
 	max_threshold = 70
 	format = " %degrees °C"
 	format_above_threshold = " %degrees °C"
-	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
+	path = "/sys/class/hwmon/hwmon0/device/temp"
 	separator_block_width = 20
 }
 
@@ -67,6 +69,18 @@ path_exists keyboard {
 	format_down = " us"
 	color_good = "#FFFFFF"
 	color_bad = "#FFFFFF"
+}
+
+path_exists keyboardext {
+	path = "/home/cunha/.cache/xkb-external"
+	format = " ext"
+	format_down = ""
+	color_good = "#FFFFFF"
+	color_bad = "#FFFFFF"
+}
+
+read_file keyboardfile {
+	path = "/home/cunha/.cache/xkb-i3status"
 }
 
 tztime local {
